@@ -1,16 +1,42 @@
-
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import AddBook from './Components/AddBook';
+import EditBook from './Components/EditBook';
+import Table from './Components/Table';
+import BookCart from './Components/BookList';
+import "../src/App.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      
-          Learn React
-      ls
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+          <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/add-book">Add Book</Link>
+            </li>
+            <li>
+              <Link to="/book-list">Book Cart</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/add-book" element={<AddBook />} />
+          <Route path="/" element={<Table />} />
+          <Route path="/edit-book/:id" element={<EditBook />} />
+          <Route path="/book-list" element={<BookCart />} />
+        </Routes>
+        <footer className='footer1'>@copy right sanjay web 2023</footer>
+      </div>
+    </Router>
   );
 }
+function Home() {
+  return <h2>Home</h2>;
+}
+
 
 export default App;

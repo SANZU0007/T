@@ -1,0 +1,35 @@
+
+
+.book-list-title {
+    margin-top: 5px;
+    background-color: #18006e;
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: moveTitle 2s linear infinite; /* Adjust the duration and timing as needed */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .book-list-title:hover {
+    color: rgb(255, 255, 255);
+    background-color: black; /* Change text color to red on hover */
+  }
+  
+  @keyframes moveTitle {
+    0% {
+      transform: translateX(100%); /* Start position, off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End position, off-screen to the left */
+    }
+  }
+  
+  .book-list-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,141 @@
+
+
+.book-list-container {
+  padding: 20px;
+}
+
+
+.book-list-title {
+  background-color: #18006e;
+  padding: 7px;
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: moveTitle 2s linear infinite; /* Adjust the duration and timing as needed */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.book-list-title:hover {
+  color: rgb(255, 255, 255);
+  background-color: black; /* Change text color to red on hover */
+}
+
+@keyframes moveTitle {
+  0% {
+    transform: translateX(100%); /* Start position, off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End position, off-screen to the left */
+  }
+}
+
+.book-list-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.book-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-card {
+  width: 200px; /* Set the width to make it square */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  -webkit-box-shadow: 3px 3px 4.5px 2px #000000;
+  -moz-box-shadow: 3px 3px 4.5px 2px #000000;
+  box-shadow: 3px 3px 4.5px 2px #000000;
+}
+
+.book-image {
+  /* Add your book cover image styles here */
+  /* You can set a fixed size for the image if needed */
+}
+/* Add this CSS in your stylesheet, e.g., App.css or Booklist.css */
+
+.book-title,
+.book-author,
+.book-year {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Add spacing between details */
+}
+
+.book-title {
+  font-weight: bold; 
+  color: red;/* Make the title text bold */
+}
+
+.book-author {
+  color: #0b58ff; /* Change author text color to a dark gray */
+}
+
+.book-year {
+  color: #1d0572; /* Change year text color to a lighter gray */
+}
+
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover
+ {
+  background-color: #0056b3;
+}
+.delete-button:hover{
+  background-color: red;
+}
+
+
+/* book info cssss */
+
+
+.book-info {
+  
+ 
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(5, 36, 173);
+  color: rgb(225, 225, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+ margin-top: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.book-info h2 {
+  margin-top: 0;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.book-info p {
+  margin-bottom: 10px;
+}
+
+.book-info button {
+  background-color: #ffa0a0;
+  color: #080101;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
