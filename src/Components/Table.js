@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../Style/Table.css';
+import { useSnackbar } from "notistack";
 
 function Table() {
   const [books, setBooks] = useState([]);
+  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
    
     axios
-      .get('http://localhost:5555/books')
+      .get('https://books-store-app-chvk.onrender.com/books')
       .then((response) => {
         setBooks(response.data.data);
       })
@@ -20,13 +22,15 @@ function Table() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5555/books/${id}`)
+      .delete(`https://books-store-app-chvk.onrender.com/books/${id}`)
       .then(() => {
         // After deleting, filter out the deleted book from state
         setBooks(books.filter((book) => book._id !== id));
+        enqueueSnackbar("Books is delete successfully", { variant: "success" }); 
       })
       .catch((error) => {
         console.error(error);
+        enqueueSnackbar("Something went wrong", { variant: "error" });
       });
   };
 

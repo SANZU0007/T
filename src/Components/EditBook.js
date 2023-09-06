@@ -17,7 +17,7 @@ function EditBook() {
 
   useEffect(() => {
     // Fetch the book details using the book's ID from the URL parameter
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`https://books-store-app-chvk.onrender.com/${id}`)
       .then((response) => {
         setBook(response.data);
       })
@@ -35,14 +35,16 @@ function EditBook() {
     event.preventDefault();
 
     // Make a PUT request to update the book details
-    axios.put(`http://localhost:5555/books/${id}`, book)
+    axios.put(`https://books-store-app-chvk.onrender.com/${id}`, book)
       .then(() => {
         console.log('Book updated successfully');
         enqueueSnackbar("Books is edit", { variant: "success" }); 
-        navigate('/book-list'); // Change the URL path accordingly
+        navigate('/book-list'); 
       })
       .catch((error) => {
+        enqueueSnackbar("something is wrong full fill the form", { variant: "error" }); 
         console.error(error);
+
       });
   };
 

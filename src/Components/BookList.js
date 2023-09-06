@@ -14,7 +14,7 @@ function BookCart() {
   useEffect(() => {
     // Make a GET request to fetch the list of books from your backend API
     axios
-      .get("http://localhost:5555/books")
+      .get("https://books-store-app-chvk.onrender.com/books")
       .then((response) => {
         setBooks(response.data.data);
      
@@ -26,7 +26,7 @@ function BookCart() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5555/books/${id}`)
+      .delete(`https://books-store-app-chvk.onrender.com/books/${id}`)
       .then(() => {
      
         setBooks(books.filter((book) => book._id !== id));
@@ -66,7 +66,7 @@ function BookCart() {
               >
                 Delete
               </button>
-              <button onClick={() => showInfo(book)}>Info</button>
+              <button className="info" onClick={() => showInfo(book)}>Info</button>
             </div>
           </div>
         ))}
@@ -85,7 +85,7 @@ function BookCart() {
             of fiction or nonfiction, usually on sheets of paper fastened or
             bound together within covers
           </p>
-          <button onClick={() => setInfoVisible(false)}>Close</button>
+          <button  className="info"onClick={() => setInfoVisible(false)}>Close</button>
         </div>
       )}
     </div>

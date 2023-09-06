@@ -13,7 +13,7 @@ function App() {
         <nav>
           <ul>
           <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Home Site</Link>
             </li>
             <li>
               <Link to="/add-book">Add Book</Link>
@@ -33,9 +33,6 @@ function App() {
       </div>
     </Router>
   );
-}
-function Home() {
-  return <h2>Home</h2>;
 }
 
 
