@@ -24,7 +24,7 @@ function AddBook() {
     event.preventDefault();
 
     // Make a POST request to add a new book to your backend API
-    axios.post('https://books-store-app-chvk.onrender.com/books', newBook)
+    axios.post('https://book-app-1.onrender.com/books', newBook)
       .then((response) => {
         console.log('Book added:', response.data);
         // You can update the UI as needed, e.g., show a success message or reset the form

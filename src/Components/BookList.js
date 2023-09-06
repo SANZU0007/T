@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "../Style/Booklist.css";
 import { useSnackbar } from "notistack";
 
-
 function BookCart() {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null); // To store the selected book for info display
@@ -14,10 +13,9 @@ function BookCart() {
   useEffect(() => {
     // Make a GET request to fetch the list of books from your backend API
     axios
-      .get("https://books-store-app-chvk.onrender.com/books")
+      .get("https://book-app-1.onrender.com/books")
       .then((response) => {
         setBooks(response.data.data);
-     
       })
       .catch((error) => {
         console.error(error);
@@ -26,11 +24,11 @@ function BookCart() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://books-store-app-chvk.onrender.com/books/${id}`)
+      .delete(`https://book-app-1.onrender.com/books/${id}`)
+      // Add the missing forward slash here --------------^
       .then(() => {
-     
         setBooks(books.filter((book) => book._id !== id));
-        enqueueSnackbar("Books is delete", { variant: "success" }); 
+        enqueueSnackbar("Book is deleted", { variant: "success" }); // Corrected the snackbar message
       })
       .catch((error) => {
         console.error(error);
@@ -49,7 +47,7 @@ function BookCart() {
         {books.map((book) => (
           <div key={book._id} className="book-card">
             <div className="book-image">
-              {/* You can add an image here if you have book cover images */}
+           
             </div>
             <div className="book-details">
               <div className="book-title">Title: {book.title}</div>
@@ -66,7 +64,9 @@ function BookCart() {
               >
                 Delete
               </button>
-              <button className="info" onClick={() => showInfo(book)}>Info</button>
+              <button className="info" onClick={() => showInfo(book)}>
+                Info
+              </button>
             </div>
           </div>
         ))}
@@ -85,7 +85,9 @@ function BookCart() {
             of fiction or nonfiction, usually on sheets of paper fastened or
             bound together within covers
           </p>
-          <button  className="info"onClick={() => setInfoVisible(false)}>Close</button>
+          <button className="info" onClick={() => setInfoVisible(false)}>
+            Close
+          </button>
         </div>
       )}
     </div>
