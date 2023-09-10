@@ -1,6 +1,5 @@
-/* Booklist.css */
 
-/* Base styles */
+
 .book-list-container {
     margin: 20px auto; /* Center the container horizontally */
     max-width: 1020px; /* Set the maximum width to 1020px */
@@ -16,7 +15,7 @@
   .book-table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgb(0, 21, 92);
     border-radius: 8px; /* Add some rounded corners to the table */
     overflow-x: auto; /* Add horizontal scrolling for small screens */
   }
@@ -29,16 +28,19 @@
   
   .book-table th {
     background-color: #007bff; /* Header background color */
-    color: #fff; /* Header text color */
+    color: #ffffff; /* Header text color */
     border-bottom: 1px solid #ffffff;
   }
   
   .book-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f0e6e6;
+    color:#020b85
   }
   
+  
   .book-table td {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #0930df;
+  
   }
   
   /* Button styles */
