@@ -5,24 +5,13 @@ import EditBook from './Components/EditBook';
 import Table from './Components/Table';
 import BookCart from './Components/BookList';
 import "../src/App.css"
+import Header from './Components/Header';
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-          <li>
-              <Link to="/">Home Site</Link>
-            </li>
-            <li>
-              <Link to="/add-book">Add Book</Link>
-            </li>
-            <li>
-              <Link to="/book-list">Book Cart</Link>
-            </li>
-          </ul>
-        </nav>
+       <Header/>
         <Routes>
           <Route path="/add-book" element={<AddBook />} />
           <Route path="/" element={<Table />} />

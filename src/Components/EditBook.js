@@ -17,7 +17,7 @@ function EditBook() {
 
   useEffect(() => {
     // Fetch the book details using the book's ID from the URL parameter
-    axios.get(`https://book-app-1.onrender.com/books/${id}`)
+    axios.get(`https://book-store-api-t109.onrender.com/books/${id}`)
       .then((response) => {
         setBook(response.data);
       })
@@ -35,7 +35,7 @@ function EditBook() {
     event.preventDefault();
 
     // Make a PUT request to update the book details
-    axios.put(`https://book-app-1.onrender.com/books/${id}`, book)
+    axios.put(`https://book-store-api-t109.onrender.com/books/${id}`, book)
       .then(() => {
         console.log('Book updated successfully');
         enqueueSnackbar("Books is edit", { variant: "success" }); 
@@ -50,7 +50,7 @@ function EditBook() {
 
   return (
     <div>
-       <span className="book-list-title">Book  Cart</span>
+      
       <form onSubmit={handleSubmit}>
         <input
           type="text"

@@ -11,7 +11,7 @@ function Table() {
   useEffect(() => {
    
     axios
-      .get('https://book-app-1.onrender.com/books')
+      .get('https://book-store-api-t109.onrender.com/books')
       .then((response) => {
         setBooks(response.data.data);
       })
@@ -22,7 +22,7 @@ function Table() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://book-app-1.onrender.com/books/${id}`)
+      .delete(`https://book-store-api-t109.onrender.com/books/${id}`)
       .then(() => {
         // After deleting, filter out the deleted book from state
         setBooks(books.filter((book) => book._id !== id));
@@ -36,7 +36,7 @@ function Table() {
 
   return (
     <div className="book-list-container">
-      <h2 className="book-list-title">Book List</h2>
+ 
       <table className="book-table">
         <thead>
           <tr>

@@ -13,7 +13,7 @@ function BookCart() {
   useEffect(() => {
     // Make a GET request to fetch the list of books from your backend API
     axios
-      .get("https://book-app-1.onrender.com/books")
+      .get("https://book-store-api-t109.onrender.com/books")
       .then((response) => {
         setBooks(response.data.data);
       })
@@ -24,7 +24,7 @@ function BookCart() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://book-app-1.onrender.com/books/${id}`)
+      .delete(`https://book-store-api-t109.onrender.com/books/${id}`)
       // Add the missing forward slash here --------------^
       .then(() => {
         setBooks(books.filter((book) => book._id !== id));
@@ -42,7 +42,7 @@ function BookCart() {
 
   return (
     <div className="book-list-container">
-      <span className="book-list-title">Book Cart</span>
+      
       <div className="book-card-container">
         {books.map((book) => (
           <div key={book._id} className="book-card">
