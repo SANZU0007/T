@@ -1,0 +1,63 @@
+/* edit Book.css */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+  background-color: #ffffff;
+}
+
+.card {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid #0e035b;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Ensure the input takes full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.button2 {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #001f3f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} 
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%;
+  }
+}
+

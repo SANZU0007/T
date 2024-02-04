@@ -1,0 +1,170 @@
+
+/* Common Styles */
+.book-list-title,
+.book-title,
+.book-author,
+.book-year,
+.edit-button,
+.delete-button {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Book List Container */
+.book-list-container {
+  padding: 20px;
+}
+
+/* Book List Title */
+.book-list-title {
+  background-color: #efefef;
+  padding: 7px;
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: moveTitle 2s linear infinite;
+  transition: color 0.3s ease;
+}
+
+.book-list-title:hover {
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+@keyframes moveTitle {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Book Card Container */
+.book-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Book Card */
+.book-card {
+
+  color: #000000;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 3px 3px 4.5px 2px #9f84dd;
+}
+
+/* Book Details */
+.book-title {
+  padding: 5px;
+  font-weight: bold;
+  color: #040454;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.book-author {
+  padding: 5px;
+  font-weight: bold;
+  color: #040454;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.book-year {
+  padding: 5px;
+  font-weight: bold;
+  color: #040454;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Edit and Delete Buttons */
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #23408f;
+  color: #fdfdfd;
+}
+
+.delete-button {
+  background-color: rgb(249, 56, 56);
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #a4cefb;
+}
+
+.delete-button:hover {
+  background-color: darkred; /* Adjust the color for delete button hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .book-card {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
+
+.info{
+  background-color: rgb(254, 254, 254);
+  color: rgb(5, 0, 0);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.book-info {
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(5, 36, 173);
+  color: rgb(225, 225, 255);
+  position: absolute;
+  top: 10px; /* Set top to 10px for all screen sizes */
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ... other styles ... */
+
+@media (min-width: 600px) {
+  /* Apply styles for screens wider than 600px */
+  .book-info {
+    padding: 30px; /* Adjust padding for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Apply styles for screens wider than 1024px */
+  .book-info {
+    margin-top: 20px; /* Adjust margin-top for larger screens */
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Apply styles for screens wider than 1440px */
+  .book-info {
+    background-color: #333; /* Example: Change background color for very large screens */
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .book-info {
+    margin-top: 10px; /* Adjust the margin-top for larger screens if needed */
+  }
+}

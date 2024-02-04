@@ -1,0 +1,39 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0738a3;
+  padding: 10px;
+}
+
+.logo-container {
+  flex-grow: 1; /* Make the logo container take up remaining space */
+}
+
+.logo-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #f7f5f5; /* Adjust the color as needed */
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.account-icon-container {
+  padding: 5px;
+}
+
+.account-icon {
+  height: 35px; /* Adjust the size as needed */
+  color: #f7f5f5; /* Adjust the color as needed */
+}
+
+.account-icon-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f7f5f5; /* Adjust the color as needed */
+}
+
+.account-icon-container button:hover {
+  opacity: 0.8;
+}
