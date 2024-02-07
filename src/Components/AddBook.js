@@ -36,7 +36,7 @@ function AddBook() {
           publishYear: '',
         });
         enqueueSnackbar('Book added successfully', { variant: 'success' });
-        navigate('/');
+        navigate('/table');
       })
       .catch((error) => {
         console.error(error);
